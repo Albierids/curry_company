@@ -13,9 +13,9 @@ st.sidebar.markdown(
     """
     ### 🔗 Acesso Rápido às Páginas
     - [📊 Home](Home.py)
-    - [📊 Visão da Empresa](pages/1_visao_empresa.py)
-    - [🛵 Visão dos Entregadores](pages/2_visao_entregadores.py)
-    - [🍽️ Visão dos Restaurantes](pages/3_visao_restaurantes.py)
+    - [📊 Visão da Empresa](./pages/1_visao_empresa.py)
+    - [🛵 Visão dos Entregadores](./pages/2_visao_entregadores.py)
+    - [🍽️ Visão dos Restaurantes](./pages/3_visao_restaurantes.py)
     """)
 
 image_path = 'image/Curry_companhy.jpg'
