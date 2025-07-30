@@ -9,15 +9,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-st.sidebar.markdown(
-    """
-    ### 🔗 Acesso Rápido às Páginas
-    - [📊 Home](Home.py)
-    - [📊 Visão da Empresa](./pages/1_visao_empresa.py)
-    - [🛵 Visão dos Entregadores](./pages/2_visao_entregadores.py)
-    - [🍽️ Visão dos Restaurantes](./pages/3_visao_restaurantes.py)
-    """)
 
+# Sidebar com imagem e textos
 image_path = 'image/Curry_companhy.jpg'
 image = Image.open(image_path)
 st.sidebar.image(image, width=60)
@@ -26,6 +19,7 @@ st.sidebar.markdown('# Curry Company')
 st.sidebar.markdown('## Fastest Delivery in Town')
 st.sidebar.markdown("""---""")
 
+# Título principal
 st.write('# Curry Company Growth Dashboard')
 
 # Texto de introdução
@@ -43,9 +37,22 @@ st.markdown(
     - Visão Restaurantes:
         - Indicadores semanais de crescimento dos restaurantes.
 
-
-
     ### Sugestões e Ajuda
     - Time de Data Science no Discord: @meigarom
     """
 )
+
+# Botões de navegação (opcional)
+st.markdown("### 🧭 Navegação Rápida")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    if st.button("📊 Visão da Empresa"):
+        st.switch_page("pages/1_visao_empresa.py")
+with col2:
+    if st.button("🛵 Visão dos Entregadores"):
+        st.switch_page("pages/2_visao_entregadores.py")
+with col3:
+    if st.button("🍽️ Visão dos Restaurantes"):
+        st.switch_page("pages/3_visao_restaurantes.py")
